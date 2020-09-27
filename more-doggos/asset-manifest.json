@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/more-doggos/static/css/main.36266253.chunk.css",
+    "main.js": "/more-doggos/static/js/main.f7d21fad.chunk.js",
+    "main.js.map": "/more-doggos/static/js/main.f7d21fad.chunk.js.map",
+    "runtime-main.js": "/more-doggos/static/js/runtime-main.20fc4628.js",
+    "runtime-main.js.map": "/more-doggos/static/js/runtime-main.20fc4628.js.map",
+    "static/js/2.1f6dbe34.chunk.js": "/more-doggos/static/js/2.1f6dbe34.chunk.js",
+    "static/js/2.1f6dbe34.chunk.js.map": "/more-doggos/static/js/2.1f6dbe34.chunk.js.map",
+    "index.html": "/more-doggos/index.html",
+    "precache-manifest.97ff399718d2bdb626392578e1e6f23a.js": "/more-doggos/precache-manifest.97ff399718d2bdb626392578e1e6f23a.js",
+    "service-worker.js": "/more-doggos/service-worker.js",
+    "static/css/main.36266253.chunk.css.map": "/more-doggos/static/css/main.36266253.chunk.css.map",
+    "static/js/2.1f6dbe34.chunk.js.LICENSE.txt": "/more-doggos/static/js/2.1f6dbe34.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/more-doggos/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.20fc4628.js",
+    "static/js/2.1f6dbe34.chunk.js",
+    "static/css/main.36266253.chunk.css",
+    "static/js/main.f7d21fad.chunk.js"
+  ]
+}
