@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Moodboard</title>
-  <link rel="icon" href="https://www.bela-design.com.au/wp-content/uploads/2020/05/favicon-1.jpg" sizes="32x32">
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
   <!-- <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
@@ -44,7 +44,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
   
   <!-- Files for colour picker  -->
-  <script src="js/jscolor-2.0.5/jscolor.js"></script>
+  <script src="js/jscolor.js"></script>
   
   <script src="js/mood-app.js"></script>
   <script src="js/add-images.js"></script>
@@ -59,13 +59,6 @@
       <div class="col-12"></div>
       <div class="col-12 col-md-4 col-lg-3 sidebar-wrap">
       <div class="sidebar">
-        <div id="logoSection">
-          <div class="moodboard-logo">
-            <a href="https://www.bela-design.com.au/" class="custom-logo-link" rel="home">
-              <img src="https://www.bela-design.com.au/wp-content/uploads/2020/06/cropped-logo-1.jpg" class="custom-logo" alt="Bela">
-            </a>
-          </div>
-        </div>
         <div class="sidebar-section" id="uploadImages">
         <h5 class="sidebar-title">
           Set your board layout: 
@@ -131,7 +124,7 @@
           </h5>
           <ul class="swatches">
             <li class="swatch-wrap">
-              <input id="shapeColour1" class="jscolor circle" value="24bddf"> 
+              <input id="shapeColour1" class="jscolor circle" value="f1ecef"> 
             </li>
             <li class="swatch-wrap" >
               <input id="shapeColour2" class="jscolor circle" value="BADF3F"> 
@@ -177,7 +170,7 @@
               </ul>
               <ul>
                 <li class="title">Colour: </li>
-                <li id="selectShapeColour"><input id="shapeColour" class="jscolor" value="24bddf"> </li>
+                <li id="selectShapeColour"><input id="shapeColour" class="jscolor" value="f1ecef"> </li>
               </ul>
               <ul>
                 <li class="title">Opacity: </li>
@@ -185,7 +178,7 @@
               </ul>
               <ul>
                 <li class="title">Line colour: </li>
-                <li id="selectLineColour"><input id="lineColour" class="jscolor" value="24bddf"> </li>
+                <li id="selectLineColour"><input id="lineColour" class="jscolor" value="f1ecef"> </li>
               </ul>
               <ul>
                 <li class="title">Line weight: </li>
@@ -260,46 +253,16 @@
             </li>
           </ul>
         </div>
-        <div class="help-section">
-          <button type="button" class="help-button"><a target="_blank" href="https://www.bela-design.com.au/design-tools/start-your-mood-board/">
-            Help
-          </a>
-          </button>
-          <!-- Button trigger modal -->
-          <!-- <button type="button" class="help-button" data-toggle="modal" data-target="#exampleModal">
-            Help
-          </button> -->
-
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div><!-- .help-section -->
         <canvas class="mood-wrap square-board" id="moodCanvas">
         </canvas>
       </div><!-- .col-9 -->
     </div><!-- .row -->
   </div><!-- .container-fluid -->
-  <div id="smallAppend"></div>
-  <div id="footer-bottom" class="clr no-footer-nav">
-    <div id="footer-bottom-inner" class="container clr">
-        <div id="copyright" class="clr">Copyright 2020 Bela Software | ABN: 88 032 062 153</div><!-- #copyright -->
-    </div><!-- #footer-bottom-inner -->
-  </div>
+    <div id="smallAppend"></div>
+    <div id="footer-bottom" class="clr no-footer-nav">
+        <div id="footer-bottom-inner" class="container clr">
+            <div id="copyright" class="clr">Copyright 2020 | All rights reserved</div><!-- #copyright -->
+        </div><!-- #footer-bottom-inner -->
+      </div>
 </body>
 </html>
