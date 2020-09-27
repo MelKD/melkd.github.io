@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Moodboard</title>
+  <link rel="icon" href="https://www.bela-design.com.au/wp-content/uploads/2020/05/favicon-1.jpg" sizes="32x32">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet"> -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script src="js/load-fonts.js"></script>
+
+  <!-- Files for images upload  -->
+  <!-- <script src="js/dropzone-5.7.0/dist/dropzone.js"></script> -->
+  <!-- Files for drag and drop  -->
+  <!-- https://interactjs.io/docs -->
+  <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+  
+  <script src="js/fabric.js"></script>
+  <!-- <script src="js/fontfaceobserver.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+  
+  <!-- Files for colour picker  -->
+  <script src="js/jscolor-2.0.5/jscolor.js"></script>
+  
+  <script src="js/mood-app.js"></script>
+  <script src="js/add-images.js"></script>
+  
+  
+  
+  
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12"></div>
+      <div class="col-12 col-md-4 col-lg-3 sidebar-wrap">
+      <div class="sidebar">
+        <div id="logoSection">
+          <div class="moodboard-logo">
+            <a href="https://www.bela-design.com.au/" class="custom-logo-link" rel="home">
+              <img src="https://www.bela-design.com.au/wp-content/uploads/2020/06/cropped-logo-1.jpg" class="custom-logo" alt="Bela">
+            </a>
+          </div>
+        </div>
+        <div class="sidebar-section" id="uploadImages">
+        <h5 class="sidebar-title">
+          Set your board layout: 
+        </h5>
+        <li class="board-selector">
+          <select id="boardSize"></select>
+        </li>
+        </div>
+        <div class="sidebar-section" id="uploadImages">
+          <h5 class="sidebar-title">
+            Upload your images:
+            <button type="button" class="btn info-button" 
+              data-placement="top" data-toggle="tooltip" data-html="true"
+              title="<p>Click a 'plus' to upload your images.</p>
+              <p><em>Uploaded images will display as a thumbnail in the grid below.</em></p>
+              <p><em>Double click an image to add it to the board.</em></p>">
+              <img src="svg/info.svg">
+            </button>
+          </h5>
+          <ul class="image-slots" id="addImages">
+            <li class="height-equal-width" id="squareImage">
+              <input class="image-input" type='file' />
+            </li>
+            <li class="height-equal-width" id="image1">
+              <input class="image-input" type='file' />
+            </li>
+            <li class="height-equal-width" id="image2">
+              <input class="image-input" type='file' />
+            </li>
+            <li class="height-equal-width" id="image3">
+              <input class="image-input" type='file' />
+            </li>
+            <li class="height-equal-width" id="image4">
+              <input class="image-input" type='file' />
+            </li>
+            <li class="height-equal-width" id="image5">
+              <input class="image-input" type='file' />
+            </li>
+            <li class="height-equal-width" id="image6">
+              <input class="image-input" type='file' />
+            </li>
+            <li class="height-equal-width" id="image7">
+              <input class="image-input" type='file' />
+            </li>
+            <li class="height-equal-width" id="image8">
+              <input class="image-input" type='file' />
+            </li>
+            <li class="height-equal-width" id="image9">
+              <input class="image-input" type='file' />
+            </li>
+            <li class="height-equal-width" id="image10">
+              <input class="image-input" type='file' />
+            </li>
+            <li class="height-equal-width" id="image11">
+              <input class="image-input" type='file' />
+            </li>
+          </ul>
+        </div>
+
+        <div class="sidebar-section">
+          <h5 class="sidebar-title">
+            Choose colour palette:
+          </h5>
+          <ul class="swatches">
+            <li class="swatch-wrap">
+              <input id="shapeColour1" class="jscolor circle" value="24bddf"> 
+            </li>
+            <li class="swatch-wrap" >
+              <input id="shapeColour2" class="jscolor circle" value="BADF3F"> 
+            </li>
+            <li class="swatch-wrap">
+              <input id="shapeColour3" class="jscolor circle" value="DFB35F"> 
+            </li>
+            <li class="swatch-wrap">
+              <input id="shapeColour4" class="jscolor circle" value="58DF7A"> 
+            </li>
+            <li class="swatch-wrap" >
+              <input id="shapeColour5" class="jscolor circle" value="C69BDF"> 
+            </li>
+            <li class="swatch-wrap">
+              <input id="shapeColour6" class="jscolor circle" value="DF6A5B"> 
+            </li>
+          </ul>
+          <p class="swatch-selector">
+            Load As*: <select id="paletteShape"></select>
+          </p>
+          <button id="loadSelectedPalette">
+            Add to board
+          </button>
+          <p><em>* Selected shape will display when loaded to the board.</em></p>
+        </div>
+
+      <div class="sidebar-section">
+        <h5 class="sidebar-title">
+          Add shapes:
+          <button type="button" class="btn info-button" 
+            data-placement="top" data-toggle="tooltip" data-html="true"
+            title="<p>Double click to add a shape to the board.</p>">
+            <img src="svg/info.svg">
+          </button>
+        </h5>
+          <div class="shapes tool-group">
+              <ul>
+                <li class="title">Shape: </li>
+                <li id="selectCircle"><img src="img/circle.png"></li>
+                <li id="selectSquare"><img src="img/square.png"> </li>
+                <li id="selectTriangle"><img src="img/triangle.png"> </li>
+                <li id="selectLine"><img src="img/line.png"> </li>
+              </ul>
+              <ul>
+                <li class="title">Colour: </li>
+                <li id="selectShapeColour"><input id="shapeColour" class="jscolor" value="24bddf"> </li>
+              </ul>
+              <ul>
+                <li class="title">Opacity: </li>
+                <li id="selectStrokeValue"><input id="shapeOpacity" value="100" type="range" bind-value-to="opacity" class="btn-object-action"></li>
+              </ul>
+              <ul>
+                <li class="title">Line colour: </li>
+                <li id="selectLineColour"><input id="lineColour" class="jscolor" value="24bddf"> </li>
+              </ul>
+              <ul>
+                <li class="title">Line weight: </li>
+                <li id="selectStrokeValue"><input id="lineWeight" value="1" min="0" max="30" type="range" bind-value-to="strokeWidth" class="btn-object-action"></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="sidebar-section" id="downloadSection">
+          <h5 class="sidebar-title">
+            Export as an image:
+          </h5>
+          <p>Save your moodboard in .jpeg or .png (transparent background) format.</p>
+          <button id="saveJpegButton"></button>
+          <button id="savePngButton"></button>
+        </div>
+      </div>
+        
+      </div><!-- .col-3 -->
+      <div class="col-12 col-md-8 col-lg-9 grey-background">
+        <div class="placement-tools">
+          <ul class="all-placement-tools top" id="displayTextTools"> 
+            <li class="btn add-text-button" id="addTextButton">Add text</li>
+            <li class="font-selector">
+              Font: <select id="font-family"></select>
+            </li>
+            <li class="font-sizer">
+              Size: <select id="font-size"></select>
+            </li>
+            <!-- <li class="font-weight-selector">
+              Weight: <select id="font-weight"></select>
+            </li> -->
+            <li>
+              <ul class="text-alignment">
+                <li class="title">Colour: </li>
+                <li id="textColourSelector" ><input id="selectTextColour" class="jscolor" onchange="update(this.jscolor)" value="ab2567"></li>
+              </ul>
+            </li>
+            <li>
+              <ul class="text-alignment">
+                <li class="title">Align: </li>
+                <li id="leftAlign" class="click-text" value="left"><img src="svg/left.svg" height="20" width="20"></li>
+                <li id="centreAlign" class="click-text" value="center"><img src="svg/centre.svg" height="20" width="20"></li>
+                <li id="rightAlign" class="click-text" value="right"><img src="svg/right.svg" height="20" width="20"></li>
+              </ul>
+            </li>
+            <li class="clear">
+              <button class="btn clear-button"><img src="svg/clear.svg" height="12" width="14"><p> Clear all</p></button>
+            </li>
+          </ul>
+          <ul class="all-placement-tools bottom">
+            <li class="arrange">
+              <ul class="tool-group">
+                <li class="title">Arrange: 
+                  <button type="button" class="btn info-button" 
+                    data-placement="bottom" data-toggle="tooltip" data-html="true"
+                    title="<p>Move a selected object forward or back relative to other objects on the board.</p>">
+                    <img src="svg/info.svg">
+                  </button>
+                </li>
+                <li class="arrange-layers" id="sendToBack"><img src="svg/send-to-back.svg" height="20" width="20"></li>
+                <li class="arrange-layers" id="sendBackOne"><img src="svg/back-one.svg" height="20" width="20"></li>
+                <li class="arrange-layers" id="sendForwardOne"><img src="svg/forward-one.svg" height="20" width="20"></li>
+                <li class="arrange-layers" id="sendToFront"><img src="svg/bring-to-front.svg" height="20" width="20"></li>
+              </ul>
+            </li>
+            <li class="resize-selector">
+              Image resize (%): <select id="objectSize"></select>
+            </li>
+            <li class="delete">
+              <button class="btn delete-button"><img src="svg/delete.svg" height="20" width="20"><p> Delete selected</p></button>
+            </li>
+          </ul>
+        </div>
+        <div class="help-section">
+          <button type="button" class="help-button"><a target="_blank" href="https://www.bela-design.com.au/design-tools/start-your-mood-board/">
+            Help
+          </a>
+          </button>
+          <!-- Button trigger modal -->
+          <!-- <button type="button" class="help-button" data-toggle="modal" data-target="#exampleModal">
+            Help
+          </button> -->
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- .help-section -->
+        <canvas class="mood-wrap square-board" id="moodCanvas">
+        </canvas>
+      </div><!-- .col-9 -->
+    </div><!-- .row -->
+  </div><!-- .container-fluid -->
+  <div id="smallAppend"></div>
+  <div id="footer-bottom" class="clr no-footer-nav">
+    <div id="footer-bottom-inner" class="container clr">
+        <div id="copyright" class="clr">Copyright 2020 Bela Software | ABN: 88 032 062 153</div><!-- #copyright -->
+    </div><!-- #footer-bottom-inner -->
+  </div>
+</body>
+</html>
