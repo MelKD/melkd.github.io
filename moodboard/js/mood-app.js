@@ -19,10 +19,10 @@ $( document ).ready(function() {
     $('.grey-background').css('display', 'none');
     $('.sidebar-section').css('display', 'none');
     $('.sidebar-wrap').css('border-right', '0px');
-    var $smallScreenImage = ('<img class="small-screen-image" src="https://www.bela-design.com.au/wp-content/uploads/2020/06/image-12.png">');
+    var $smallScreenImage = ('<img class="small-screen-image" src="moodboard-fabric-js.png">');
     $('#smallAppend').append($smallScreenImage);
     var $smallScreenMessage = 
-    ('<p class="small-screen">Looking for the Bela mood board app? Please try again on your desktop.</p>');
+    ('<p class="small-screen">The Moodboard is intended for viewing on larger screens. Please try again on your desktop.</p>');
     $('#smallAppend').append($smallScreenMessage);
 
     var $footerHeight = $('#footer-bottom').outerHeight();
